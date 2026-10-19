@@ -1,0 +1,180 @@
+{
+  "name": "Thein Htay",
+  "title": ".NET Developer",
+  "avatar": "/profile.jpg",
+  "resumeUrl": "/assets/cv.pdf",
+  "summary": "Experienced .NET & Full-Stack Developer with a proven track record in architecting web applications, RESTful APIs, enterprise CRM systems, and desktop solutions. Skilled across ASP.NET Core, C#, Next.js, React, and SQL/PostgreSQL databases.",
+  "profile": "Dedicated and results-oriented .NET & Full-Stack Developer with 4+ years of professional experience designing, building, and deploying scalable web, desktop, and enterprise software solutions. Proficient in C#, ASP.NET Core MVC/Web API, Next.js, React, and relational database management with MSSQL and PostgreSQL. Proven ability to bridge intuitive frontend interfaces with robust backend architectures, collaborate across cross-functional teams, and deliver mission-critical software for international clients.",
+  "contact": {
+    "address": "Htun Bon Taw Village, Myaing Township, Magway Region.",
+    "currentAddress": "No (27), Building No (83/84), Yangon-Insein Road, Thukha Bus Stop, 9 Quarter, Hlaing, Yangon.",
+    "phoneNumbers": ["09777147397", "09969979146"],
+    "email": "theinhtay.dev@gmail.com",
+    "linkedIn": "theinhtay-dev",
+    "linkedInUrl": "https://linkedin.com/in/theinhtay-dev"
+  },
+  "personal": {
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "nationality": "Myanmar",
+    "religion": "Buddhist",
+    "nrcNo": "8/MaMaNa (Naing)231864"
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "skills": ["HTML5", "CSS3", "Bootstrap 4", "jQuery", "AJAX", "React", "Next.js"]
+    },
+    {
+      "category": "Backend",
+      "skills": ["C#", "ADO.NET", "ASP.NET Core", "ASP.NET MVC", "Dapper", "Entity Framework", "LINQ", "RESTful API", "SSIS", "Ruby On Rails"]
+    },
+    {
+      "category": "Databases",
+      "skills": ["Microsoft SQL Server", "PostgreSQL"]
+    },
+    {
+      "category": "Version Control",
+      "skills": ["GitHub", "GitLab", "TFS"]
+    },
+    {
+      "category": "Operating System",
+      "skills": ["Windows"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Computer Science (B.C.Sc.)",
+      "institution": "University of Computer Studies (Pakokku)",
+      "period": "2013 - 2019"
+    },
+    {
+      "degree": "Web Application Development with ASP .NET MVC",
+      "institution": "ACE Inspiration | Yangon",
+      "period": "2019 - 2020"
+    }
+  ],
+  "experience": [
+    {
+      "company": "AcePlus Solution Company Limited",
+      "location": "Yangon, Myanmar",
+      "period": "2024(Nov) - Currently",
+      "isCurrent": true,
+      "projects": [
+        {
+          "title": "Point Reward System",
+          "technologies": ["ASP.NET Core MVC", "PostgreSQL", "Next.js"],
+          "responsibilities": [
+            "Developing admin dashboard with ASP.Net core MVC, PostgreSQL",
+            "Update point reward system dashboard frontend with NextJs"
+          ]
+        },
+        {
+          "title": "Claim System",
+          "technologies": ["Next.js", "Prisma"],
+          "responsibilities": [
+            "Developing claim system dashboard with NextJs, Prisma"
+          ]
+        },
+        {
+          "title": "Japan Outsourcing Project",
+          "technologies": ["Ruby on Rails", "RESTful API"],
+          "responsibilities": [
+            "Developing Japanese outsource project backend API with ruby on rails"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "SpectrumSoft Technologies",
+      "location": "Yangon, Myanmar",
+      "period": "2023(Aug) - 2024(Oct)",
+      "isCurrent": false,
+      "projects": [
+        {
+          "title": "Microsoft Dynamics 365 CRM",
+          "technologies": ["Dynamics 365 CRM"],
+          "responsibilities": [
+            "Responsible for maintaining the existing features and adding new requirements."
+          ]
+        },
+        {
+          "title": "Power Virtual Agent",
+          "technologies": ["C#", "ASP.NET Core Web API", "Power Automate Flow", "Power Pages", "Azure Translator"],
+          "responsibilities": [
+            "Responsible for power bot configurations and adding in power pages. Develop API with ASP.Net Core Web API to use in power bot.",
+            "Developing with C#, Microsoft Power Automate Flow, Power Page, Azure Translator."
+          ]
+        },
+        {
+          "title": "STACK Development",
+          "technologies": ["ASP.NET MVC", "jQuery", "AJAX", "HTML", "CSS", "JavaScript"],
+          "responsibilities": [
+            "Responsible for maintaining the existing system and adding new requirements.",
+            "Developing with ASP.Net MVC, jQuery, Ajax, HTML, CSS, JavaScript"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "AcePlus Solution Company Limited",
+      "location": "Yangon, Myanmar",
+      "period": "2020(Mar) - 2022(Dec)",
+      "isCurrent": false,
+      "projects": [
+        {
+          "title": "Japan Outsourcing Projects",
+          "subtitle": "Office Invoicing System",
+          "description": "Developed office used invoicing system for Japan customer.",
+          "technologies": ["C#", "Windows Forms", "Web Services", "ADO.NET"],
+          "responsibilities": [
+            "Development of desktop applications using C# and Windows Forms, delivering intuitive user interfaces and efficient functionalities.",
+            "Developing with Window Forms, Web Services, ADO.Net."
+          ]
+        },
+        {
+          "title": "Progressive Web App Development",
+          "subtitle": "Customer Self-Control App",
+          "technologies": ["React JS", "HTML", "CSS", "JavaScript", "Bootstrap"],
+          "responsibilities": [
+            "Developing with React JS, HTML, CSS, JavaScript, Bootstrap",
+            "Developed customer account self-control app by using React. Responsible for UI UX improvement, code refactoring & version upgraded."
+          ]
+        },
+        {
+          "title": "Online Learning Platform Development",
+          "technologies": ["React JS", "HTML", "CSS", "JavaScript", "Bootstrap"],
+          "responsibilities": [
+            "Developing with React JS, HTML, CSS, JavaScript, Bootstrap",
+            "Code refactoring & version upgraded."
+          ]
+        },
+        {
+          "title": "Banking Project",
+          "technologies": ["ASP.NET Core MVC", "MSSQL", "RESTful API", "HTML", "CSS", "jQuery", "AJAX", "IIS"],
+          "responsibilities": [
+            "Worked closely with the project manager to develop forms and features according to project requirements.",
+            "Developed both backend logic and frontend presentation layers within the MVC framework, ensuring a cohesive user experience.",
+            "Developing with ASP.Net Core MVC, MSSQL, RESTful API, HTML, CSS, jQuery, AJAX",
+            "Implemented and maintained databases using MSSQL for efficient data storage and retrieval.",
+            "Deploying web application on IIS"
+          ]
+        },
+        {
+          "title": "Unity Game Project",
+          "subtitle": "Educational Game",
+          "description": "Develop education game project for AcePlus Solution Company Limited.",
+          "technologies": ["Unity Game Engine", "C#", "Git"],
+          "responsibilities": [
+            "Developed and implemented character animations using Unity's Animator and Animation systems.",
+            "Created and managed animation states and transitions to ensure smooth and responsive gameplay.",
+            "Worked closely with the design team to integrate animations that match the game's artistic vision and enhance player experience.",
+            "Collaborated with artists, designers, and other developers to bring the game concept to life.",
+            "Designed and coded core gameplay mechanics using Unity Game Engine, C#.",
+            "Git for version control."
+          ]
+        }
+      ]
+    }
+  ]
+}

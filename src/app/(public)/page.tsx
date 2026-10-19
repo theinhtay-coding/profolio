@@ -1,68 +1,55 @@
-import Image from "next/image";
+import cvData from "@/constants/cv-data.json";
+import { CVData } from "@/types/cv";
+import Header from "@/components/cv/Header";
+import ProfileSection from "@/components/cv/ProfileSection";
+import SkillsSection from "@/components/cv/SkillsSection";
+import ExperienceSection from "@/components/cv/ExperienceSection";
+import EducationSection from "@/components/cv/EducationSection";
+import PersonalInfoSection from "@/components/cv/PersonalInfoSection";
 
-export default function Home() {
+const data = cvData as CVData;
+
+export const metadata = {
+  title: `${data.name} - ${data.title} | Resume`,
+  description: data.summary,
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8 print:p-0">
+      <main className="mx-auto max-w-5xl space-y-8 print:max-w-none print:space-y-6">
+        {/* Profile Header with Avatar & Contact */}
+        <Header data={data} />
+
+        {/* 2-Column Responsive Layout */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 print:grid-cols-12 print:gap-6">
+          {/* Main Column: Profile & Work Experience */}
+          <div className="order-2 space-y-8 lg:order-1 lg:col-span-8 print:order-1 print:col-span-7">
+            {/* Professional Profile / Summary */}
+            <ProfileSection profile={data.profile} />
+
+            {/* Work Experience */}
+            <ExperienceSection experience={data.experience} />
+          </div>
+
+          {/* Sidebar Column: Skills, Education, Personal Info */}
+          <div className="order-1 space-y-8 lg:order-2 lg:col-span-4 print:order-2 print:col-span-5">
+            <SkillsSection skills={data.skills} />
+            <EducationSection education={data.education} />
+            <PersonalInfoSection personal={data.personal} contact={data.contact} />
+          </div>
+        </div>
+
+        {/* Footer info (hidden when printing) */}
+        <footer className="border-t border-zinc-200/80 pt-6 text-center text-xs text-zinc-400 dark:border-zinc-800 print:hidden">
+          <p>
+            Dynamically loaded from{" "}
+            <code className="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-[11px] text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+              src/constants/cv-data.json
+            </code>
+            . Simply update the JSON file to refresh profile photo, summary, skills, and companies.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </footer>
       </main>
     </div>
   );
