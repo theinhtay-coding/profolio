@@ -30,18 +30,18 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
-      - name: Build Next.js Static Export
-        run: npm run build
+      - name: Build OpenNext Cloudflare Worker
+        run: npx opennextjs-cloudflare build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: static-dist
-          path: out
+          name: open-next-dist
+          path: .open-next
           retention-days: 1
 
   deploy:
-    name: Deploy to Cloudflare Pages (CD)
+    name: Deploy to Cloudflare Workers (CD)
     needs: ci
     runs-on: ubuntu-latest
     steps:
@@ -51,12 +51,12 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: static-dist
-          path: out
+          name: open-next-dist
+          path: .open-next
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy out --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME || 'profolio' }} --commit-dirty=true
+          command: deploy
